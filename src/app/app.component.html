@@ -1,7 +1,7 @@
 <p> Username </p>
 
 <label>User Name</label>
-<input type="text" class="form-control" (input)="onUpdateServerName($event)"/>
+<input id="userNameInput" #userNameInput type="text" class="form-control" (input)="onUpdateServerName($event)"/>
 <p>{{ serverName }}</p>
 
-<button class="btn btn-primary" [disabled] ="!allowNewServer">Reset User</button>
+<button class="btn btn-primary" [disabled] ="!allowNewServer" (click)="resetUser()">Reset User</button>
